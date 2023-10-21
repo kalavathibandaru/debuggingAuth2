@@ -38,7 +38,7 @@ class LoginForm extends Component {
     const url = 'https://apis.ccbp.in/login'
     const options = {
       method: 'POST',
-      data: JSON.stringify(userDetails),
+      body: JSON.stringify(userDetails),
     }
     const response = await fetch(url, options)
     const data = await response.json()
@@ -110,7 +110,7 @@ class LoginForm extends Component {
           className="login-img"
           alt="website login"
         />
-        <form className="form-container" onSumit={this.submitForm}>
+        <form className="form-container" onSubmit={this.submitForm}>
           <img
             src="https://assets.ccbp.in/frontend/react-js/nxt-trendz-logo-img.png"
             className="login-website-logo-desktop-img"
